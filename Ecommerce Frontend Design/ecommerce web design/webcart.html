@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #2e2e4d;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            border: 1px solid transparent;
+        }
+
+        nav ul li a:hover {
+            background-color: #4e4ef5;
+            transform: translateY(-2px);
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu (insert inside <body>) -->
+    <nav>
+        <ul>
+            <li><a href="mainwebpage.html">WebMain</a></li>
+            <li><a href="weblistview.html">ListView</a></li>
+            <li><a href="webgridview.html">GridView</a></li>
+            <li><a href="webdetails.html">WebDetails</a></li>
+            <li><a href="webcart.html">WebCart</a></li>
+        </ul>
+    </nav>
+    <div style="width: 1440px; height: 1807px; position: relative; background: #F7FAFC; overflow: hidden">
+        <div
+            style="width: 880px; height: 552px; left: 130px; top: 168px; position: absolute; background: white; border-radius: 6px; border: 1px #DEE2E7 solid">
+        </div>
+        <div data-color="light" data-content="btn-text" data-size="normal"
+            style="height: 40px; padding-left: 16px; padding-right: 16px; left: 875px; top: 659px; position: absolute; background: white; border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+            <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                <div
+                    style="text-align: center; color: #0D6EFD; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                    Remove all</div>
+            </div>
+        </div>
+        <div data-color="primary" data-content="btn-icon+text" data-size="normal"
+            style="width: 159px; height: 40px; left: 149px; top: 659px; position: absolute; background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%); border-radius: 6px">
+            <div style="width: 22px; height: 22px; left: 9px; top: 9px; position: absolute">
+                <div
+                    style="width: 14.67px; height: 14.67px; left: 3.67px; top: 3.67px; position: absolute; background: white">
+                </div>
+            </div>
+            <div
+                style="left: 45px; top: 11px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                <div style="color: white; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                    Back to shop</div>
+            </div>
+        </div>
+        <div
+            style="width: 840px; height: 136px; left: 150px; top: 191px; position: absolute; border-bottom: 1px #DEE2E7 solid">
+            <div
+                style="width: 123px; height: 40px; left: 717px; top: 40px; position: absolute; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08)">
+                <div
+                    style="width: 123px; height: 40px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 6px; border: 1px #DEE2E7 solid">
+                </div>
+                <div
+                    style="left: 10px; top: 11px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                    Qty: 9</div>
+                <div style="width: 24px; height: 24px; left: 91px; top: 8px; position: absolute">
+                    <div
+                        style="width: 12px; height: 7.41px; left: 6px; top: 8.29px; position: absolute; background: #8B96A5">
+                    </div>
+                </div>
+            </div>
+            <div data-color="light" data-content="btn-text" data-size="small"
+                style="height: 30px; padding-left: 10px; padding-right: 10px; left: 91px; top: 86px; position: absolute; background: white; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08); border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="text-align: center; color: #FA3434; font-size: 13px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Remove</div>
+                </div>
+            </div>
+            <div data-color="light" data-content="btn-text" data-size="small"
+                style="height: 30px; padding-left: 10px; padding-right: 10px; left: 169.50px; top: 86px; position: absolute; background: white; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08); border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="text-align: center; color: #0D6EFD; font-size: 13px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Save for later</div>
+                </div>
+            </div>
+            <div
+                style="width: 462px; left: 90px; top: 0px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                T-shirts with multiple colors, for men and lady</div>
+            <div
+                style="width: 429px; left: 90px; top: 28px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Size: medium, Color: blue, Material: Plastic<br />Seller: Artel Market</div>
+            <div
+                style="left: 786px; top: 6px; position: absolute; text-align: right; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                $78.99</div>
+            <div
+                style="width: 80px; height: 80px; left: 0px; top: 0px; position: absolute; background: #F7F7F7; border-radius: 6px; border: 1px #E0E0E0 solid">
+            </div>
+            <div
+                style="width: 70px; height: 70px; left: 5px; top: 5px; position: absolute; mix-blend-mode: multiply; background: white; overflow: hidden">
+                <img style="width: 52.58px; height: 59.73px; left: 8.71px; top: 4.98px; position: absolute"
+                    src="SH2.jpg" />
+            </div>
+        </div>
+        <div
+            style="width: 840px; height: 136px; left: 149px; top: 347px; position: absolute; border-bottom: 1px #DEE2E7 solid">
+            <div
+                style="width: 123px; height: 40px; left: 717px; top: 40px; position: absolute; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08)">
+                <div
+                    style="width: 123px; height: 40px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 6px; border: 1px #DEE2E7 solid">
+                </div>
+                <div
+                    style="left: 10px; top: 11px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                    Qty: 3</div>
+                <div style="width: 24px; height: 24px; left: 91px; top: 8px; position: absolute">
+                    <div
+                        style="width: 12px; height: 7.41px; left: 6px; top: 8.29px; position: absolute; background: #8B96A5">
+                    </div>
+                </div>
+            </div>
+            <div data-color="light" data-content="btn-text" data-size="small"
+                style="height: 30px; padding-left: 10px; padding-right: 10px; left: 91px; top: 86px; position: absolute; background: white; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08); border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="text-align: center; color: #FA3434; font-size: 13px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Remove</div>
+                </div>
+            </div>
+            <div data-color="light" data-content="btn-text" data-size="small"
+                style="height: 30px; padding-left: 10px; padding-right: 10px; left: 169.50px; top: 86px; position: absolute; background: white; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08); border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="text-align: center; color: #0D6EFD; font-size: 13px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Save for later</div>
+                </div>
+            </div>
+            <div
+                style="width: 462px; left: 90px; top: 0px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                T-shirts with multiple colors, for men and lady</div>
+            <div
+                style="width: 429px; left: 90px; top: 28px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Size: medium, Color: blue, Material: Plastic<br />Seller: Best factory LLC</div>
+            <div
+                style="left: 784px; top: 6px; position: absolute; text-align: right; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                $39.00</div>
+            <div
+                style="width: 80px; height: 80px; left: 0px; top: 0px; position: absolute; background: #F7F7F7; border-radius: 6px; border: 1px #E0E0E0 solid">
+            </div>
+            <div
+                style="width: 70px; height: 70px; left: 5px; top: 5px; position: absolute; mix-blend-mode: multiply; background: white; overflow: hidden">
+                <img style="width: 60.36px; height: 60.36px; left: 4.98px; top: 4.98px; position: absolute"
+                    src="5.jpg" />
+            </div>
+        </div>
+        <div
+            style="width: 840px; height: 136px; left: 150px; top: 503px; position: absolute; border-bottom: 1px #DEE2E7 solid">
+            <div
+                style="width: 123px; height: 40px; left: 717px; top: 40px; position: absolute; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08)">
+                <div
+                    style="width: 123px; height: 40px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 6px; border: 1px #DEE2E7 solid">
+                </div>
+                <div
+                    style="left: 10px; top: 11px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                    Qty: 1</div>
+                <div style="width: 24px; height: 24px; left: 91px; top: 8px; position: absolute">
+                    <div
+                        style="width: 12px; height: 7.41px; left: 6px; top: 8.29px; position: absolute; background: #8B96A5">
+                    </div>
+                </div>
+            </div>
+            <div data-color="light" data-content="btn-text" data-size="small"
+                style="height: 30px; padding-left: 10px; padding-right: 10px; left: 91px; top: 86px; position: absolute; background: white; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08); border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="text-align: center; color: #FA3434; font-size: 13px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Remove</div>
+                </div>
+            </div>
+            <div data-color="light" data-content="btn-text" data-size="small"
+                style="height: 30px; padding-left: 10px; padding-right: 10px; left: 169.50px; top: 86px; position: absolute; background: white; box-shadow: 0px 1px 2px rgba(56.31, 56.31, 56.31, 0.08); border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="text-align: center; color: #0D6EFD; font-size: 13px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Save for later</div>
+                </div>
+            </div>
+            <div
+                style="width: 462px; left: 90px; top: 0px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                T-shirts with multiple colors, for men and lady</div>
+            <div
+                style="width: 429px; left: 90px; top: 28px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Size: medium, Color: blue, Material: Plastic<br />Seller: Artel Market</div>
+            <div
+                style="left: 778px; top: 6px; position: absolute; text-align: right; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                $170.50</div>
+            <div
+                style="width: 80px; height: 80px; left: 0px; top: 0px; position: absolute; background: #F7F7F7; border-radius: 6px; border: 1px #E0E0E0 solid">
+            </div>
+            <div
+                style="width: 70px; height: 70px; left: 5px; top: 5px; position: absolute; mix-blend-mode: multiply; background: white; overflow: hidden">
+                <img style="width: 63.78px; height: 63.78px; left: 3.11px; top: 3.11px; position: absolute"
+                    src="SH4.jpg" />
+            </div>
+        </div>
+        <div
+            style="width: 280px; height: 302px; left: 1030px; top: 290px; position: absolute; background: white; box-shadow: 0px 4px 10px rgba(56.31, 56.31, 56.31, 0.10); border-radius: 6px; border: 1px #DEE2E7 solid">
+        </div>
+        <div data-pay-type="amex" data-payment="payment"
+            style="width: 34px; height: 22px; left: 1066px; top: 549px; position: absolute">
+            <div
+                style="width: 34px; height: 22px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 4px; border: 1px #EEEEEE solid">
+            </div>
+        </div>
+        <div data-pay-type="mastercard" data-payment="payment"
+            style="width: 34px; height: 22px; left: 1108px; top: 549px; position: absolute">
+            <div
+                style="width: 34px; height: 22px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 4px; border: 1px #EEEEEE solid">
+            </div>
+            <div
+                style="width: 9.26px; height: 11.56px; left: 8px; top: 5.07px; position: absolute; background: #EB001B">
+            </div>
+            <div
+                style="width: 4.34px; height: 9.06px; left: 15.09px; top: 6.32px; position: absolute; background: #FF5E00">
+            </div>
+            <div
+                style="width: 9.26px; height: 11.56px; left: 17.26px; top: 5.07px; position: absolute; background: #F79E1C">
+            </div>
+        </div>
+        <div data-pay-type="pp" data-payment="payment"
+            style="width: 34px; height: 22px; left: 1150px; top: 549px; position: absolute">
+            <div
+                style="width: 34px; height: 22px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 4px; border: 1px #EEEEEE solid">
+            </div>
+            <div
+                style="width: 10.58px; height: 12.45px; left: 11.17px; top: 4px; position: absolute; background: #27346A">
+            </div>
+            <div
+                style="width: 10.58px; height: 12.45px; left: 11.17px; top: 4px; position: absolute; background: #27346A">
+            </div>
+            <div
+                style="width: 8.84px; height: 10.44px; left: 13.99px; top: 7.56px; position: absolute; background: #2790C3">
+            </div>
+            <div
+                style="width: 6.86px; height: 5.19px; left: 14.82px; top: 7.11px; position: absolute; background: #1F264F">
+            </div>
+        </div>
+        <div data-pay-type="visa" data-payment="payment"
+            style="width: 34px; height: 22px; left: 1192px; top: 549px; position: absolute">
+            <div
+                style="width: 34px; height: 22px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 4px; border: 1px #EEEEEE solid">
+            </div>
+            <div style="width: 4.68px; height: 4.14px; left: 4px; top: 7.14px; position: absolute; background: #E6A540">
+            </div>
+        </div>
+        <div data-pay-type="applepay" data-payment="payment"
+            style="width: 34px; height: 22px; left: 1234px; top: 549px; position: absolute">
+            <div
+                style="width: 34px; height: 22px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 4px; border: 1px #F7F7F7 solid">
+            </div>
+            <img style="width: 27px; height: 11px; left: 4px; top: 6px; position: absolute"
+                src="IN3.jpg" />
+        </div>
+        <div data-color="primary" data-content="btn-text" data-size="large"
+            style="width: 248px; height: 54px; padding-left: 20px; padding-right: 20px; left: 1046px; top: 477px; position: absolute; background: #00B517; border-radius: 8px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+            <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                <div
+                    style="text-align: center; color: white; font-size: 18px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                    Checkout</div>
+            </div>
+        </div>
+        <div
+            style="left: 1050px; top: 433px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+            Total:</div>
+        <div
+            style="left: 1207px; top: 427px; position: absolute; text-align: right; color: #1C1C1C; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px; word-wrap: break-word">
+            $1357.97</div>
+        <div
+            style="left: 1050px; top: 310px; position: absolute; color: #505050; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Subtotal:</div>
+        <div
+            style="left: 1224px; top: 310px; position: absolute; text-align: right; color: #505050; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            $1403.97</div>
+        <div
+            style="left: 1050px; top: 339px; position: absolute; color: #505050; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Discount:</div>
+        <div
+            style="left: 1229px; top: 339px; position: absolute; text-align: right; color: #FA3434; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            - $60.00</div>
+        <div
+            style="left: 1050px; top: 368px; position: absolute; color: #505050; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Tax:</div>
+        <div
+            style="left: 1228px; top: 368px; position: absolute; text-align: right; color: #00B517; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            + $14.00</div>
+        <div style="width: 244px; height: 1px; left: 1049px; top: 409px; position: absolute; background: #E4E4E4"></div>
+        <div style="width: 1440px; height: 86px; left: 0px; top: 0px; position: absolute">
+            <div style="width: 1440px; height: 86px; left: 0px; top: 0px; position: absolute; background: white"></div>
+            <div
+                style="left: 1264px; top: 51px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #8B96A5; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                My cart</div>
+            <div
+                style="width: 20.01px; height: 17.65px; left: 1217px; top: 26px; position: absolute; background: #8B96A5">
+            </div>
+            <div
+                style="left: 1207px; top: 51px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #8B96A5; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                Orders</div>
+            <div
+                style="left: 1140px; top: 51px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #8B96A5; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                Message</div>
+            <div
+                style="left: 1080px; top: 51px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #8B96A5; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                Profile</div>
+            <div style="width: 150px; height: 46px; left: 130px; top: 20px; position: absolute">
+                <div
+                    style="width: 77px; height: 21.10px; left: 49.21px; top: 12px; position: absolute; background: #8CB7F5">
+                </div>
+                <div style="width: 44px; height: 44px; left: -1px; top: 1px; position: absolute; opacity: 0.80">
+                    <div
+                        style="width: 36.35px; height: 40.17px; left: 7.65px; top: 1.91px; position: absolute; background: rgba(13, 110, 253, 0.20)">
+                    </div>
+                    <div
+                        style="width: 38.26px; height: 40.17px; left: 0.96px; top: 1.91px; position: absolute; background: #0D6EFD">
+                    </div>
+                    <div
+                        style="width: 13.50px; height: 11.79px; left: 13.46px; top: 18.36px; position: absolute; opacity: 0.30; background: white">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 1440px; height: 324px; left: 0px; top: 1483px; position: absolute; background: white">
+            <div
+                style="left: 964px; top: 40px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                For users</div>
+            <div
+                style="left: 964px; top: 72px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Login</div>
+            <div
+                style="left: 964px; top: 99px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Register</div>
+            <div
+                style="left: 964px; top: 126px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Settings</div>
+            <div
+                style="left: 964px; top: 153px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                My Orders</div>
+            <div style="width: 150px; height: 46px; left: 129px; top: 40px; position: absolute">
+                <div
+                    style="width: 77px; height: 21.10px; left: 49.21px; top: 12px; position: absolute; background: #8CB7F5">
+                </div>
+                <div style="width: 44px; height: 44px; left: -1px; top: 1px; position: absolute; opacity: 0.80">
+                    <div
+                        style="width: 36.35px; height: 40.17px; left: 7.65px; top: 1.91px; position: absolute; background: rgba(13, 110, 253, 0.20)">
+                    </div>
+                    <div
+                        style="width: 38.26px; height: 40.17px; left: 0.96px; top: 1.91px; position: absolute; background: #0D6EFD">
+                    </div>
+                    <div
+                        style="width: 13.50px; height: 11.79px; left: 13.46px; top: 18.36px; position: absolute; opacity: 0.30; background: white">
+                    </div>
+                </div>
+            </div>
+            <div
+                style="width: 276px; left: 129px; top: 101px; position: absolute; color: #505050; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Best information about the company gies here but now lorem ipsum is</div>
+            <div style="width: 32px; height: 32px; left: 129px; top: 165px; position: absolute">
+                <div style="width: 30px; height: 30px; left: 1px; top: 1px; position: absolute; background: #BDC4CD">
+                </div>
+            </div>
+            <div style="width: 32px; height: 32px; left: 171px; top: 165px; position: absolute">
+                <div style="width: 30px; height: 30px; left: 1px; top: 1px; position: absolute; background: #BDC4CD">
+                </div>
+            </div>
+            <div style="width: 32px; height: 32px; left: 213px; top: 165px; position: absolute">
+                <div style="width: 30px; height: 30px; left: 1px; top: 1px; position: absolute; background: #BDC4CD">
+                </div>
+            </div>
+            <div style="width: 32px; height: 32px; left: 255px; top: 165px; position: absolute">
+                <div style="width: 30px; height: 30px; left: 1px; top: 1px; position: absolute; background: #BDC4CD">
+                </div>
+            </div>
+            <div style="width: 32px; height: 32px; left: 297px; top: 165px; position: absolute">
+                <div style="width: 30px; height: 30px; left: 1px; top: 1px; position: absolute; background: #BDC4CD">
+                </div>
+            </div>
+            <div
+                style="width: 1440px; height: 68px; left: 0px; top: 256px; position: absolute; background: #EFF2F4; border-top: 1px #DEE2E7 solid">
+            </div>
+            <div data-property-1="US" style="width: 24px; height: 17px; left: 1197px; top: 282px; position: absolute">
+                <img style="width: 24px; height: 17px; left: 0px; top: 0px; position: absolute"
+                    src="IN1.jpg" />
+            </div>
+            <div
+                style="left: 1227px; top: 279px; position: absolute; text-align: right; color: #606060; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                English</div>
+            <div style="width: 24px; height: 24px; left: 1280px; top: 279px; position: absolute">
+                <div
+                    style="width: 12px; height: 7.41px; left: 6px; top: 8.29px; position: absolute; background: #1C1C1C">
+                </div>
+            </div>
+            <div
+                style="width: 320px; left: 128px; top: 279px; position: absolute; color: #606060; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                © 2023 Ecommerce. </div>
+            <div data-type="Appstore" style="width: 124px; height: 42px; left: 1129px; top: 77px; position: absolute">
+                <div
+                    style="width: 124px; height: 42px; left: 0px; top: 0px; position: absolute; background: #1C1C1C; border-radius: 6px">
+                </div>
+                <div
+                    style="width: 101.90px; height: 25.34px; left: 10.94px; top: 8.69px; position: absolute; background: white">
+                </div>
+            </div>
+            <div data-type="Google Play"
+                style="width: 124px; height: 42px; left: 1129px; top: 127px; position: absolute">
+                <div
+                    style="width: 124px; height: 42px; left: 0px; top: 0px; position: absolute; background: #1C1C1C; border-radius: 6px">
+                </div>
+                <div
+                    style="width: 102.64px; height: 24.62px; left: 10.94px; top: 8.69px; position: absolute; background: white">
+                </div>
+            </div>
+            <div
+                style="left: 1130px; top: 40px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                Get app</div>
+            <div
+                style="left: 765px; top: 40px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                Information</div>
+            <div
+                style="left: 765px; top: 72px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Help Center</div>
+            <div
+                style="left: 765px; top: 99px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Money Refund</div>
+            <div
+                style="left: 765px; top: 126px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Shipping</div>
+            <div
+                style="left: 765px; top: 153px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Contact us</div>
+            <div
+                style="left: 611px; top: 40px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                Partnership</div>
+            <div
+                style="left: 611px; top: 72px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                About Us</div>
+            <div
+                style="left: 611px; top: 99px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Find store</div>
+            <div
+                style="left: 611px; top: 126px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Categories</div>
+            <div
+                style="left: 611px; top: 153px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Blogs</div>
+            <div
+                style="left: 466px; top: 40px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 22px; word-wrap: break-word">
+                About</div>
+            <div
+                style="left: 466px; top: 72px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                About Us</div>
+            <div
+                style="left: 466px; top: 99px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Find store</div>
+            <div
+                style="left: 466px; top: 126px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Categories</div>
+            <div
+                style="left: 466px; top: 153px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                Blogs</div>
+        </div>
+        <div
+            style="width: 1180px; height: 475px; left: 130px; top: 827px; position: absolute; background: white; border-radius: 6px; border: 1px #DEE2E7 solid">
+        </div>
+        <div style="width: 270px; height: 382px; left: 150px; top: 897px; position: absolute">
+            <div
+                style="width: 270px; height: 240px; left: 0px; top: 0px; position: absolute; background: #EEEEEE; border-radius: 6px">
+            </div>
+            <div
+                style="width: 225px; height: 225px; left: 22px; top: 8px; position: absolute; mix-blend-mode: multiply; background: white; overflow: hidden">
+                <img style="width: 194px; height: 194px; left: 15px; top: 15px; position: absolute"
+                    src="IN6.jpg" />
+            </div>
+            <div data-color="light" data-content="btn-icon+text" data-size="normal"
+                style="width: 156.58px; height: 40px; left: 0px; top: 342px; position: absolute; background: white; border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px">
+                <div style="width: 22px; height: 22px; left: 9px; top: 9px; position: absolute">
+                    <div
+                        style="width: 18.34px; height: 18.33px; left: 1.83px; top: 1.83px; position: absolute; background: #0D6EFD">
+                    </div>
+                </div>
+                <div
+                    style="left: 43.50px; top: 11px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="color: #0D6EFD; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Move to cart</div>
+                </div>
+            </div>
+            <div
+                style="width: 215.80px; left: 0px; top: 282px; position: absolute; color: #606060; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                GoPro HERO6 4K Action Camera - Black</div>
+            <div
+                style="width: 63.23px; left: 0px; top: 250px; position: absolute; color: #1C1C1C; font-size: 18px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                $99.50</div>
+        </div>
+        <div style="width: 270px; height: 382px; left: 1020px; top: 897px; position: absolute">
+            <div
+                style="width: 270px; height: 240px; left: 0px; top: 0px; position: absolute; background: #EEEEEE; border-radius: 6px">
+            </div>
+            <div
+                style="width: 225px; height: 225px; left: 22px; top: 8px; position: absolute; mix-blend-mode: multiply; background: white">
+                <img style="width: 203px; height: 160px; left: 11px; top: 33px; position: absolute"
+                    src="IN9.jpg" />
+            </div>
+            <div data-color="light" data-content="btn-icon+text" data-size="normal"
+                style="width: 156.58px; height: 40px; left: 0px; top: 342px; position: absolute; background: white; border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px">
+                <div style="width: 22px; height: 22px; left: 9px; top: 9px; position: absolute">
+                    <div
+                        style="width: 18.34px; height: 18.33px; left: 1.83px; top: 1.83px; position: absolute; background: #0D6EFD">
+                    </div>
+                </div>
+                <div
+                    style="left: 43.50px; top: 11px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="color: #0D6EFD; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Move to cart</div>
+                </div>
+            </div>
+            <div
+                style="width: 215.80px; left: 0px; top: 282px; position: absolute; color: #606060; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                GoPro HERO6 4K Action Camera - Black</div>
+            <div
+                style="width: 63.23px; left: 0px; top: 250px; position: absolute; color: #1C1C1C; font-size: 18px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                $99.50</div>
+        </div>
+        <div style="width: 270px; height: 382px; left: 730px; top: 897px; position: absolute">
+            <div
+                style="width: 270px; height: 240px; left: 0px; top: 0px; position: absolute; background: #EEEEEE; border-radius: 6px">
+            </div>
+            <div
+                style="width: 225px; height: 225px; left: 22px; top: 8px; position: absolute; mix-blend-mode: multiply; background: white">
+                <img style="width: 163px; height: 195px; left: 31px; top: 15px; position: absolute"
+                    src="9.jpg" />
+            </div>
+            <div data-color="light" data-content="btn-icon+text" data-size="normal"
+                style="width: 156.58px; height: 40px; left: 0px; top: 342px; position: absolute; background: white; border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px">
+                <div style="width: 22px; height: 22px; left: 9px; top: 9px; position: absolute">
+                    <div
+                        style="width: 18.34px; height: 18.33px; left: 1.83px; top: 1.83px; position: absolute; background: #0D6EFD">
+                    </div>
+                </div>
+                <div
+                    style="left: 43.50px; top: 11px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="color: #0D6EFD; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Move to cart</div>
+                </div>
+            </div>
+            <div
+                style="width: 215.80px; left: 0px; top: 282px; position: absolute; color: #606060; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                GoPro HERO6 4K Action Camera - Black</div>
+            <div
+                style="width: 63.23px; left: 0px; top: 250px; position: absolute; color: #1C1C1C; font-size: 18px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                $99.50</div>
+        </div>
+        <div style="width: 270px; height: 382px; left: 440px; top: 897px; position: absolute">
+            <div
+                style="width: 270px; height: 240px; left: 0px; top: 0px; position: absolute; background: #EEEEEE; border-radius: 6px">
+            </div>
+            <div
+                style="width: 225px; height: 225px; left: 22px; top: 8px; position: absolute; mix-blend-mode: multiply; background: white; overflow: hidden">
+                <img style="width: 209px; height: 198px; left: 8px; top: 16px; position: absolute"
+                    src="IN8.jpg" />
+            </div>
+            <div data-color="light" data-content="btn-icon+text" data-size="normal"
+                style="width: 156.58px; height: 40px; left: 0px; top: 342px; position: absolute; background: white; border-radius: 6px; outline: 1px #DEE2E7 solid; outline-offset: -1px">
+                <div style="width: 22px; height: 22px; left: 9px; top: 9px; position: absolute">
+                    <div
+                        style="width: 18.34px; height: 18.33px; left: 1.83px; top: 1.83px; position: absolute; background: #0D6EFD">
+                    </div>
+                </div>
+                <div
+                    style="left: 43.50px; top: 11px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                    <div
+                        style="color: #0D6EFD; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                        Move to cart</div>
+                </div>
+            </div>
+            <div
+                style="width: 215.80px; left: 0px; top: 282px; position: absolute; color: #606060; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+                GoPro HERO6 4K Action Camera - Black</div>
+            <div
+                style="width: 63.23px; left: 0px; top: 250px; position: absolute; color: #1C1C1C; font-size: 18px; font-family: Inter; font-weight: 600; word-wrap: break-word">
+                $99.50</div>
+        </div>
+        <div
+            style="left: 150px; top: 847px; position: absolute; color: #1C1C1C; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px; word-wrap: break-word">
+            Saved for later</div>
+        <div
+            style="width: 1180px; height: 120px; left: 130px; top: 1322px; position: absolute; background: #005ADE; border-radius: 8px">
+        </div>
+        <div style="width: 745px; height: 120px; left: 130px; top: 1322px; position: absolute; background: #237CFF">
+        </div>
+        <div data-color="primary" data-content="btn-text" data-size="normal"
+            style="height: 40px; padding-left: 16px; padding-right: 16px; left: 1157px; top: 1361px; position: absolute; background: #FF9017; border-radius: 6px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+            <div style="justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
+                <div
+                    style="text-align: center; color: white; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                    Shop now</div>
+            </div>
+        </div>
+        <div
+            style="left: 160px; top: 1385px; position: absolute; opacity: 0.70; color: white; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+            Have you ever finally just write dummy info</div>
+        <div
+            style="width: 455px; left: 160px; top: 1350px; position: absolute; color: white; font-size: 24px; font-family: Inter; font-weight: 600; line-height: 32px; word-wrap: break-word">
+            Super discount on more than 100 USD</div>
+        <div
+            style="left: 130px; top: 113px; position: absolute; color: #1C1C1C; font-size: 24px; font-family: Inter; font-weight: 600; line-height: 32px; word-wrap: break-word">
+            My cart (3)</div>
+        <div
+            style="left: 188px; top: 772px; position: absolute; color: #A9ACB0; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Have you ever finally just </div>
+        <div
+            style="width: 184px; left: 188px; top: 750px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Secure payment</div>
+        <div
+            style="width: 48px; height: 48px; left: 130px; top: 749px; position: absolute; background: #DEE2E7; border-radius: 9999px">
+        </div>
+        <div
+            style="left: 484px; top: 771px; position: absolute; color: #A9ACB0; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Have you ever finally just </div>
+        <div
+            style="width: 188px; left: 484px; top: 749px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Customer support</div>
+        <div
+            style="width: 48px; height: 48px; left: 426px; top: 749px; position: absolute; background: #DEE2E7; border-radius: 9999px">
+        </div>
+        <div
+            style="left: 784px; top: 771px; position: absolute; color: #A9ACB0; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Have you ever finally just</div>
+        <div
+            style="width: 175px; left: 784px; top: 749px; position: absolute; color: #1C1C1C; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">
+            Free delivery</div>
+        <div
+            style="width: 48px; height: 48px; left: 726px; top: 749px; position: absolute; background: #DEE2E7; border-radius: 9999px">
+        </div>
+        <div
+            style="width: 280px; height: 110px; left: 1030px; top: 168px; position: absolute; background: white; border-radius: 6px; border: 1px #DEE2E7 solid">
+        </div>
+        <div data-color="light" data-content="btn-text" data-group="right" data-size="normal"
+            style="width: 85px; height: 40px; left: 1209px; top: 216px; position: absolute">
+            <div
+                style="width: 85px; height: 40px; left: 0px; top: 0px; position: absolute; background: white; border: 1px #DEE2E7 solid">
+            </div>
+            <div
+                style="width: 65px; left: 10px; top: 11px; position: absolute; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                <div
+                    style="text-align: center; color: #0D6EFD; font-size: 16px; font-family: Inter; font-weight: 500; word-wrap: break-word">
+                    Apply</div>
+            </div>
+        </div>
+        <div style="width: 164px; height: 40px; left: 1047px; top: 216px; position: absolute">
+            <div
+                style="width: 164px; height: 40px; left: 0px; top: 0px; position: absolute; background: white; border: 1px #E0E0E0 solid">
+            </div>
+            <div
+                style="width: 149px; left: 10px; top: 11px; position: absolute; color: #8B96A5; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+                Add coupon</div>
+        </div>
+        <div
+            style="left: 1046px; top: 188px; position: absolute; color: #505050; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">
+            Have a coupon?</div>
+    </div>
+</body>
+
+</html>
